@@ -1,0 +1,164 @@
+Objective -
+
+Using an object oriented approach, create a dungeon-crawling game where the player can navigate through a series of rooms, fighting enemies and collecting items. Instructions are mainly guidelines, so be creative!
+
+Skills -
+
+	1) Object-Oriented Programming
+	2) Architecture
+	3) jQuery
+
+Requirements -
+
+Your game must include the following "classes" (defined as Constructors in JS)
+
+	World
+		Contains the entire game world, including Player, Rooms, Item, and Monsters
+	Player
+		Has inventory, can pick up items from rooms
+		Can examine Items and Monsters
+		Can use consumables like potions to restore HP
+		Can drop Items from inventory
+		Has health - drops when hit in combat, can be restored with potions
+		Has strength, determines damage done to Monsters
+	Room
+		Contains Monsters and Items
+		Has navigation info about which Rooms can be traveled to
+	Item
+		Can be in Room or Player Inventory
+		Can be picked up by the Player and used
+	Monster
+		One instance for each monster that can be encountered
+		Has health, which goes down when hit
+		Has strength, which determines damage dealt
+		Removed from room when killed
+
+
+Part 1 - Navigation
+
+	Create World with Player and some initial Rooms
+		(OPTIONAL) Implement procedural generation
+			Use Math.random
+			Can be used for
+				Room generation
+				Monster spawning/placement
+				Item spawning/placement
+				Item statistics
+	Player should be able to navigate up, down, left, and right (NESW, not U/D)
+	Rooms are 0 dimensional - they simply contain the player, monster, objects, etc
+		Graphically rooms can fill the screen and show any items/monsters within
+		Should have visual cues for which directions you can travel
+	When transitioning between rooms use sliding animations to show navigation directionally
+	Use Moustrap library to enable keyboard controls
+
+Part 2 - Items
+
+	Populate rooms with various Items at load, or when entered
+	Implement EXAMINE command to get details on items
+	Implement LOOT command to pick up items
+	Implement USE command to use consumables or equipment
+	Implement DROP command to remove item from Inventory and place in Room
+
+Part 3 - Fighting
+
+	Player can choose to examine a Monster or Fight it
+		(OPTIONAL) Consider having aggro mobs
+	Monsters won't fight unless instigated
+	Battle continues until one party dies or Player leaves the Room
+		Consider adding auto-flee for Players and Monsters
+	If Player leaves Room, Monster will stay aggressive to him
+		(OPTIONAL) Add Monster chasing feature - maybe to specific classes of monster
+	If Player is killed they can choose to
+		Resume (Keep everything but restart in current room)
+			Refill Player HP to 75%, Monster HP to full
+		Restart (Restart entire dungeon, resetting everything)
+
+Part 4 - Long Term/Optional Additions
+	Player Levels
+		Leveling up increases
+			HP
+			STR
+			Gives new skills/spells
+			Use a player.levelUp() to do all of these things
+	Graphic HUD with
+		HP
+		STR
+		Experience Bar
+	Classes
+		Fighter
+		Mage
+		Healer
+	Spells/Skills
+		Fireball
+
+	Body Switching
+		Essentially only have monsters and have the "player" switch between them
+	Difficulty levels
+		Decrease player hp/str
+		Increase monster hp/str/population
+	More in-depth Items
+		Generated randomly
+		Multiple equipment slots
+			Weapon
+			Shield
+			Helmet
+			Chest
+			Legs
+	Boss Fight
+
+
+
+
+
+TO DO:
+
+	Prototyping:
+		✔	Get 2 Room level styled and set up @done (14-10-06 10:40)
+		✔	Create makeRooms() to autopopulate rooms @done (14-10-06 12:19)
+			✔	0-1 bottom to top @done (14-10-06 12:19)
+			✔	0-1 left to right @done (14-10-06 12:19)
+		✔	Dynamically spawn Player in Room 0,1 @done (14-10-06 10:40)
+			✔	Positioned absolutely slightly below center @done (14-10-06 10:40)
+		✔	Dynamically spawn Monster in Room 0,0 @done (14-10-06 13:19)
+			✔	Positioned absolutely slightly above center @done (14-10-06 13:19)
+		✔	Make Player move from Room 0,1 to 0,0 @done (14-10-06 13:19)
+
+
+	Design:
+		☐	Block out basic look
+		☐	Create small squares for player/monster prototypes
+		☐	Determine appropriate data structures
+		☐	For fun: implement IDDQD cheat code
+			☐	Mousetrap.bind('i d d q d', playerInvuln(){} )
+		☐	Figure out how to center player/monster in room
+		Player:
+			☐	Object with HP, STR, and Inventory (array)
+			☐	Methods:
+				☐	Navigation
+					☐	N, E, S, W
+					☐	Location array starts at [0,0]
+						☐	Top Left
+				☐	Attack
+					☐	Make damage slightly random
+					☐	Still based off of STR
+				☐	Take Damage
+				☐	GET
+				☐	DROP
+				☐	EXAMINE
+				☐	USE ITEM
+				☐	Set Strength
+					For when items/consumables/leveling increase str
+		Items:
+			☐	Objects,
+				☐	Equipment Class
+					☐	+HP/+STR
+					☐	Can use Math.random to set stats
+				☐	Consumable Class
+					☐	Can increase HP or STR
+		WORLD:
+			☐	Object that contains all other objects
+			☐	Contains Player, Rooms initially
+			☐	Properties:
+				☐	Size
+					☐	2 piece array with X and Y size
+

@@ -1,0 +1,17 @@
+.container {
+	background: gray;
+	max-width: 500px;
+	margin: auto;
+}
+
+.header-small {
+	font-size: 0.5em;
+}
+
+@media screen and (max-width: 400px) {
+	.container{
+		background: #333;
+		color: white;
+		font-size: .75em;
+	}
+}

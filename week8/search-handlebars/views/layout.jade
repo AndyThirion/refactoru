@@ -1,0 +1,22 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset="utf-8")
+		link(rel="stylesheet", href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.css")
+		title Untitled
+
+	body
+		block content
+	
+		
+		script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js")
+		script(src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore.js")
+		script(src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.js")
+		script(src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js")
+		script(src="scripts/main.js")
+		//- This is a way to include handlebars templates from other files
+		//- per Max
+		//- May have to change filename to <whatever>.jade
+		//- And/or move it into views foldier
+		//- script#handlebars-tpl(type='text/x-handlebars-template')
+		//- 	include results.html

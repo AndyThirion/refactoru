@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	.container
+		h1 Programming Language Search Engine
+		h3 Written in Handlebars
+
+		form(method='post' action='/search')
+			input#search-field(type='text', name='keyword')
+			input#search-submit(type='submit')
+
+		.results
+
+	
+	//- Handlebars template for search results
+	//- Will be appended to the results div after search
+	script#results-tpl(type="text/x-handlebars-template")
+		h2 Search Results
+		h4 {{name}}
+		p {{desc}}
+		
+		//- h3 Name: a(href=#) {{this}}
+		//- p {{desc}}

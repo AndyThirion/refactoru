@@ -1,0 +1,115 @@
+{ "height":10,
+ "layers":[
+        {
+         "data":[4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 1, 1, 3, 3, 3, 3, 1, 1, 4, 4, 1, 1, 3, 3, 3, 3, 1, 1, 4, 4, 1, 1, 1, 3, 3, 1, 1, 1, 4, 4, 1, 1, 1, 3, 3, 1, 1, 1, 4, 4, 1, 1, 1, 3, 3, 1, 1, 1, 4, 4, 1, 1, 1, 3, 3, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+         "height":10,
+         "name":"Tile Layer 1",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":10,
+         "x":0,
+         "y":0
+        }],
+ "orientation":"orthogonal",
+ "properties":
+    {
+
+    },
+ "renderorder":"right-down",
+ "tileheight":32,
+ "tilesets":[
+        {
+         "firstgid":1,
+         "image":"..\/..\/..\/..\/Documents\/crawl-tiles Oct-5-2010\/dc-dngn\/floor\/pebble_brown2.png",
+         "imageheight":32,
+         "imagewidth":32,
+         "margin":0,
+         "name":"floor",
+         "properties":
+            {
+
+            },
+         "spacing":0,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "firstgid":2,
+         "image":"..\/..\/..\/..\/Documents\/crawl-tiles Oct-5-2010\/dc-dngn\/floor\/floor_vines4.png",
+         "imageheight":32,
+         "imagewidth":32,
+         "margin":0,
+         "name":"wall",
+         "properties":
+            {
+
+            },
+         "spacing":0,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "firstgid":3,
+         "image":"..\/..\/..\/..\/Documents\/crawl-tiles Oct-5-2010\/dc-dngn\/floor\/floor_sand_stone2.png",
+         "imageheight":32,
+         "imagewidth":32,
+         "margin":0,
+         "name":"floor2",
+         "properties":
+            {
+
+            },
+         "spacing":0,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "firstgid":4,
+         "image":"..\/..\/..\/..\/Documents\/crawl-tiles Oct-5-2010\/dc-dngn\/floor\/rect_gray3.png",
+         "imageheight":32,
+         "imagewidth":32,
+         "margin":0,
+         "name":"wall2",
+         "properties":
+            {
+
+            },
+         "spacing":0,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "firstgid":5,
+         "image":"..\/..\/..\/..\/Documents\/crawl-tiles Oct-5-2010\/dc-dngn\/gateways\/dngn_stone_arch.png",
+         "imageheight":32,
+         "imagewidth":32,
+         "margin":0,
+         "name":"arch",
+         "properties":
+            {
+
+            },
+         "spacing":0,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "firstgid":6,
+         "image":"..\/..\/..\/..\/Documents\/crawl-tiles Oct-5-2010\/dc-dngn\/gateways\/dngn_enter_pandemonium.png",
+         "imageheight":32,
+         "imagewidth":32,
+         "margin":0,
+         "name":"entrance",
+         "properties":
+            {
+
+            },
+         "spacing":0,
+         "tileheight":32,
+         "tilewidth":32
+        }],
+ "tilewidth":32,
+ "version":1,
+ "width":10
+}

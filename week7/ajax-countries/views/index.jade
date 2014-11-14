@@ -1,0 +1,17 @@
+extends layout
+
+block content
+
+	.container.center-block
+		h1 Welcome to Ajax Countries!
+
+		//- Search form and button
+		.row
+			form.col-md-4(method="post", action="/search")
+				input(type="text", name="country", id="country-search-field")
+				input.btn.btn-primary.btn-sm(type="submit" value="Search Countries" id="country-search-button")
+			.countries-matched.text-info.col-md-4
+
+		.row
+			//- Load full country list
+			button.col-md-4.btn.btn-primary(type="button", id="load-countries") Load Countries

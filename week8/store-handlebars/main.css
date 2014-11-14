@@ -1,0 +1,32 @@
+.container {
+	background: #333;
+	max-width: 66%;
+}
+
+body {
+	background: #555;
+	color: #999;
+}
+
+.product {
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.details {
+	list-style-type: none;
+}
+
+.page-header{
+	text-align: center;
+	color: #333;
+	background: peachpuff;
+}
+
+.wishlist {
+	text-align: center;
+	list-style-type: none;
+	padding-top: .25em;
+	padding-bottom: .25em;
+}

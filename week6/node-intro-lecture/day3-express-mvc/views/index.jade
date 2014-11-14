@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	h1 Casa del Barf
+	h3 Menu of Desserts
+
+	p: a(href="/about") About Us
+
+	form(method="post", action="/dessertSubmit")
+		input(type="text", name="name", placeholder="Name")
+		input(type="text", name="cost", placeholder="Cost")
+		input(type="text", name="flavor", placeholder="Flavor")
+		input(type="text", name="rating", placeholder="Rating")
+		input(type="submit")
+
+
+	ul
+		for dessert in desserts
+			li
+				h5= dessert.name
+				p: em= dessert.cost
+				p= dessert.flavor
+				p: strong This dish is #{dessert.rating}/10

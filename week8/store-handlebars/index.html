@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Untitled</title>
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+  
+  <div class="container">
+    
+    <div class="page-header">
+      <h1>Our Game Store</h1>
+    </div>
+
+    <div id="product-container">
+    </div>
+    
+    <button class="btn btn-primary" id="wishlist-add-button"> Add to Wishlist</button>
+
+    <ul id="wishlist">
+    </ul>
+
+  </div>
+  <!-- Handlebars Template -->
+  <script id="product-list-template" type="text/x-handlebars-template">
+    <div class="product center-block">
+      <h1>{{title}}</h1>
+      <img src="{{image}}">
+      {{#if sale}}
+        <h3><s>Cost: ${{cost}}</s></h3>
+        <h3>Sale Price: ${{sale}}</h3>
+      {{else}}
+        <h3>Cost: ${{cost}}</h3>
+      {{/if}}
+      {{#if details}}
+      <ul class="details center-block">
+        {{#each details}}
+          <li><h4>{{@key}} - {{this}}</h4></li>
+        {{/each}}
+      </ul>
+      {{/if}}
+      <button class="btn btn-primary wishlist-add-button">Add to Wishlist</button>
+    </div>
+  </script>
+
+  <script id="wishlist-template" type="text/x-handlebars-template">
+    <li class="wishlist">
+      <h3>{{title}}</h3>
+      <button class="btn btn-primary wishlist-remove-button center-block">Remove from wishlist</button>
+
+    </li>
+  </script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+    <script src="products-data.js"></script>
+    <script src="main.js"></script>
+
+  </body>
+</html>

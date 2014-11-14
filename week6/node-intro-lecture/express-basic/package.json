@@ -1,0 +1,9 @@
+{
+  "name": "basic-express-app",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "~4.9.7",
+    "jade": "~1.7.0"
+  }
+}

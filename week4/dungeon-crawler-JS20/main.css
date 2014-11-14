@@ -1,0 +1,64 @@
+/* DIVS AND IMPORTANT CLASSES
+
+	.room-display = the div that holds all rooms
+	.room-row = TR that holds Room td's
+	.room = each individual room (td's)
+
+*/
+
+/*body {
+	background: #bdc3c7;
+}*/
+
+.room-display {
+	/*height: 100vh;*/
+}
+
+.room-table {
+	height: 600px;
+	height: 90vh;
+	width: 100%;
+	text-align: center;
+	margin: auto;
+}
+
+.room {
+	background-color: gray;
+	/*padding: 20% 0;*/
+	border: 5px solid #2c3e50;
+	position: relative;
+	overflow: hidden;
+}
+
+.character {
+	width: 100%;
+	/*top: 65%;*/
+	position: absolute;
+	text-align: center;
+}
+
+.monster {
+	/*width: 100%;*/
+	/*top: 5%;*/
+}
+
+.HUD {
+	height: 10vh;
+	background: #2980b9;
+}
+
+
+.damage-text {
+	opacity: 1;
+	transition: .5s;
+	position: absolute;
+	top: 10%;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+
+.monster-damage-text{
+	color: red;
+	/*top: 10%;*/
+}

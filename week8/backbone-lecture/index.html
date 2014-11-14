@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Backbone Lecture</title>
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+  
+    <div class="container">
+      
+    </div>
+
+    <!-- Templates -->
+
+    <!-- Single candy item template -->
+    <script id="candy-tpl" type="text/x-handlebars-template">
+      <li class="candy-item">
+        <h3> {{name}} <button class="btn btn-primary btn-xs remove-candy">Remove Candy</button></h3>
+
+        <p>This candy has {{calories}} calories</p>
+        {{#if isPoisoned}}
+          <p class="alert alert-danger">Don't eat it</p>
+        {{/if}}
+      </li>
+    </script>
+
+    <!-- Bag view -->
+    <script id="bag-tpl" type="text/x-handlebars-template">
+    <div class="candy-bag">
+      <h1>{{title}}</h1>
+      <form>
+        <input type="text" name="name" placeholder="Name..">
+        <input type="submit">
+      </form>
+      <ul class="candy-items"></ul>
+    </div>
+    </script>
+
+    <!-- External Scripts -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone.js"></script>
+
+    <!-- Backbone Scripts -->
+    <script src="scripts/models/candy-model.js"></script>
+    <script src="scripts/collections/candy-bag.js"></script>
+    <script src="scripts/views/candy-view.js"></script>
+    <script src="scripts/views/bag-view.js"></script>
+    <script src="scripts/main.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+Requirements
+
+1) Build a client-side web app that allows users to share inspirational quotes. You choose whether the app is broken up into multiple pages or exposes functionality through multiple components on a single page.
+
+2) A user can add new quotes through a form. The form should ask for the quote and author, which are both required.
+
+3) Display a list of all the quotes. This list should update in real-time when quotes are added, deleted, or rated.
+
+4) User can click on the author of a quote to go to a separate page/screen that shows all quotes from that person.
+
+5) Users can rate a quote 1-5 stars
+
+6) Quotes should be sorted by rating
+
+7) Make a 'Random Quote' button that selects a quote at random and displays it in a popup (not an alert).
+
+8) User can delete a quote. The user should be given the option to undo their last action
+
+
+Design:
+	☐	Block out page
+	☐	Style basic page
+	☐	HTML for automatically generate quote elements
+	☐	Style automatically generated quote elements
+	☐	Create submission form
+		☐	This should be a lightbox
+
+
+Functionality:
+	☐	Create event handler for submission to save the quote data
+	☐	System to automatically append new quote to the right place
+	☐	System to delete the quotes when a button is click
+		☐	Use event handler with .remove()
+	☐	Quote submission
+		☐	must accept a username
+			☐	This should be a .class for later sorting
+		☐	Create quote JS class (there will be a separate object for each quote)
+			☐	Keys are username, rating (1-5), content
+		☐	Methods
+			☐	class.render()
+				☐	Returns the quote element
+	☐	Create "Random Quote" button
